@@ -1,0 +1,22 @@
+<div class="container-fluid mt-5 w-75 d-flex justify-content-between">
+  <h3 class="text-white" style="font-family: 'Fredoka One', cursive;">
+    Our Products
+  </h3>
+  <!-- <button
+    type="button"
+    routerLink="/shopping-cart"
+    class="btn btn-light"
+    style="width:200px;"
+  >
+    Order
+  </button> -->
+</div>
+<div class="container-fluid mt-4 w-75">
+  <div class="container-fluid mt-4 w-100">
+    <product
+      *ngFor="let product of products"
+      [product]="product"
+      (productAdded)="addProductToCart($event)"
+    ></product>
+  </div>
+</div>
